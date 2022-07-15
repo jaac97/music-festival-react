@@ -1,0 +1,23 @@
+@use '../base/variable' as v;
+
+.header {
+    background-color: v.$turquoise;
+}
+.header__container {
+    color: v.$white;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 2rem;
+}
+.header__heading{
+    font-size: 4rem;
+}
+.nav{
+    display: flex;
+    gap: 2rem;
+}
+.nav__anchor {
+    font-size: 2.5rem;
+    color: white;
+}
