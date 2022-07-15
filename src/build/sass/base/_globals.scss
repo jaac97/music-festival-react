@@ -3,22 +3,28 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
 }
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 *{
     margin: 0;
     padding: 0;
 }
-*, *::before, *:_after {
-    box-sizing: inherit;
-}
+
 body {
     font-size: 1.6rem;
     font-family: Montserrat,sans-serif;
 }
+
 [class$="__container"] {
     max-width: 120rem;
     margin: 0 auto;
-
 }
+
 a{
     text-decoration: none;
+}
+
+h1,h2,h3{
+    margin: 0 0 5rem 0;
 }

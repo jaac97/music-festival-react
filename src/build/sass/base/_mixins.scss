@@ -1,0 +1,17 @@
+@use 'variable' as v;
+
+@mixin phone {
+    @media (min-width: 480px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
