@@ -1,23 +1,46 @@
 @use '../base/variable' as v;
-
+@use '../base/mixins' as m;
 .header {
     background-color: v.$turquoise;
 }
 .header__container {
     color: v.$white;
     display: flex;
-    justify-content: space-between; 
+    flex-direction: column;
     align-items: center;
     padding: 2rem;
+    @include m.tablet{
+        flex-direction: row;
+        justify-content: space-between; 
+    }
 }
+
 .header__heading{
     font-size: 4rem;
+    text-align: center;
+    @include m.tablet{
+        font-size: 4rem;
+        margin: 0;
+
+    }
 }
 .nav{
+    margin-top: 1rem;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    flex-direction: column;
+    @include m.tablet{
+        flex-direction: row;
+        margin-top: unset;
+        gap: 2rem;
+
+    }
 }
 .nav__anchor {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     color: white;
+    @include m.tablet {
+        font-size: 2.5rem;
+    }
 }
+
