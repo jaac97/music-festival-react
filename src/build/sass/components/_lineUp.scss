@@ -18,7 +18,13 @@
 
 }
 .schedule__grid{
+    margin-bottom: 2rem;
+    max-width: 90%;
+    margin: 0 auto;
   @include m.tablet {
+    margin-bottom: unset;
+    max-width: unset;
+    margin: unset;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
