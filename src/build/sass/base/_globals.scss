@@ -24,7 +24,15 @@ body {
 a{
     text-decoration: none;
 }
-
+img{
+    max-width: 100%;
+}
 h1,h2,h3{
     margin: 0 0 5rem 0;
+}
+p {
+    line-height: 1.5;
+}
+::-webkit-scrollbar{
+        display: none;
 }
