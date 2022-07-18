@@ -1,0 +1,76 @@
+@use '../base/variable' as v;
+@use '../base/mixins' as m;
+.lineup{
+    background-color: v.$lightRed;
+}
+.lineup__details {
+    text-align: center;
+    padding: 5rem 0;
+    color: v.$white;
+}
+.lineup__heading{
+    font-size: 3rem;
+}
+.schedule__heading{
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 5rem 0;
+
+}
+.schedule__grid{
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.schedule__stage{
+    padding-top: 2rem ;
+    color: black;
+}
+.schedule__stage--yellow{
+    background-color: v.$yellow;
+}
+.schedule__stage--turquoise{
+    background-color: v.$turquoise;
+}
+.schedule__title{
+    font-weight: 400;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+[class^="schedule__stage--"]::after{
+    background-size: 15rem;
+    content: '';
+    display: flex;
+    height: 10rem;
+    width: 20rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 2rem auto;
+}
+.schedule__stage--rock::after{
+    background-image: url('img/icono_rock.png');
+}
+.schedule__stage--edm::after{
+    background-image: url('img/icono_edm.png');
+}
+
+.schedule__list{
+    list-style: none;
+    text-align: left;
+}
+.schedule__item{
+    padding: 2.5rem;
+    font-weight: 700;
+
+}
+.schedule__item--darkYellow{
+    background-color: v.$darkYellow;
+}
+.schedule__item--darkTurquoise{
+    background-color: v.$darkTurquoise;
+}
+.schedule__artist{
+    font-weight: 400;
+}
