@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './build/sass/app.scss';
 import Description from './components/Description';
+import Galery from './components/Galery';
 import Header from './components/Header'
 import Hero from './components/Hero';
 import LineUp from './components/LineUp';
@@ -13,5 +14,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Hero />
       <Description />
       <LineUp />
+      <Galery />
   </React.StrictMode>
 )
