@@ -2,7 +2,11 @@ const Description = () => {
     return ( 
         <div className="festival festival__container" >
             <div className="festival__image">
-            <img src="img/imagen_vocalista.jpg" alt="Vocalist image" />
+             <img src="img/imagen_vocalista.webp" alt="Vocalist image" />
+             <picture>
+                <source media="(min-width:650px)" srcset="img/imagen_vocalista.webp" />
+                <source media="(min-width:465px)" srcset="img/imagen_vocalista.afiv" />
+            </picture> 
 
             </div>
             <div className="festival__text">
