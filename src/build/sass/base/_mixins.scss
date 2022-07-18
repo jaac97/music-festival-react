@@ -10,8 +10,9 @@
         @content;
     }
 }
-@mixin tablet {
+@mixin desktop {
     @media (min-width: 992px) {
         @content;
     }
 }
+
