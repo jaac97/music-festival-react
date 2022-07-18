@@ -1,1 +1,43 @@
 @use '../base/variable' as v;
+@use '../base//mixins' as m;
+.hero {
+    min-height: 20rem;
+    max-height: 50rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.videos{
+    display: block;
+    @include m.tablet {
+        width: 100%;  
+    }
+}
+.hero__overlay{
+    background: linear-gradient(270deg,rgba(126,2,195,.5),rgba(255,0,110,.3));
+    opacity: 1;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.hero__container{
+    flex: 0 0 100%;
+}
+.hero__heading{
+    font-size: 7rem;
+    color: v.$white;
+    margin: 0;
+
+}
+.hero__subtitle{
+    color: v.$white;
+    background-color: v.$lightRed;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 0;
+}
