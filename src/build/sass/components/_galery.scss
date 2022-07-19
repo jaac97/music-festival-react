@@ -1,2 +1,27 @@
 @use '../base/mixins' as m;
 @use '../base/variable' as v;
+.galery{
+    padding: 5rem 0
+}
+.galery__heading{
+    text-align: center;
+    font-size: 3rem;
+}
+.photos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    @include m.tablet {
+     grid-template-columns: repeat(4, 1fr);  
+        
+    }
+    @include m.desktop {
+     grid-template-columns: repeat(6, 1fr);  
+    }
+}
+
+.photos__img{
+    width: 18rem;
+    height: 12rem;
+    object-fit: cover;
+}
