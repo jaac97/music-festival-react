@@ -5,11 +5,11 @@ const Tickets = () => {
                 <h2 className="tickets__heading">Tickets</h2>
                 <div className="tickets__grid">
                     <div className="ticket">
-                        <h3 className="ticket__heading">1 day</h3>
+                        <h3 className="ticket__main-heading">1 day</h3>
                             <table className="ticket__description">
                                 <thead>
                                     <tr className="ticket__head-row">
-                                        <th className="tcket__heading">Include</th>
+                                        <th className="ticket__heading">Include</th>
                                     </tr>  
                                 </thead>
                                 <tbody>
@@ -17,6 +17,8 @@ const Tickets = () => {
                                         <td className="ticket__body-description">
                                             Access to both stages
                                         </td>
+                                    </tr>
+                                    <tr className="ticket__body-row">
                                         <td className="ticket__body-description">
                                             Food and Drink
                                         </td>
@@ -30,11 +32,11 @@ const Tickets = () => {
                             </table>
                     </div>
                     <div className="ticket">
-                        <h3 className="ticket__heading">2 days</h3>
+                        <h3 className="ticket__main-heading">2 days</h3>
                             <table className="ticket__description">
                                 <thead>
                                     <tr className="ticket__head-row">
-                                        <th className="tcket__heading">Include</th>
+                                        <th className="ticket__heading">Include</th>
                                     </tr>  
                                 </thead>
                                 <tbody>
@@ -42,12 +44,18 @@ const Tickets = () => {
                                         <td className="ticket__body-description">
                                             Access to both stages
                                         </td>
+                                    </tr>
+                                    <tr className="ticket__body-row">
                                         <td className="ticket__body-description">
                                             Food and Drink
                                         </td>
+                                    </tr>
+                                    <tr className="ticket__body-row">
                                         <td className="ticket__body-description">
                                             Event's shirt
                                         </td>
+                                    </tr>
+                                    <tr className="ticket__body-row">                                        
                                         <td className="ticket__body-description">
                                             VIP Access
                                         </td>

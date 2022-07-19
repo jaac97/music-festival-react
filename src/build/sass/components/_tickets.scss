@@ -1,0 +1,65 @@
+@use '../base/variable' as v;
+@use '../base/mixins' as m;
+.tickets {
+    background-color: v.$turquoise;
+    text-align: center;
+    padding: 5rem 0;
+}
+.tickets__heading {
+    color: v.$white;
+    font-weight: 700;
+    font-size: 3rem;
+}
+.tickets__grid {
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+    }
+}
+.ticket{
+    margin-bottom: 3rem;
+    @include m.tablet {
+        margin-bottom: 0;
+    }
+}
+.ticket__main-heading{
+    font-size: 2.8rem;
+    margin: 2.5rem 0;
+    @include m.desktop {
+       margin: 5rem 0;
+    }
+    color: v.$white;
+}
+.ticket__heading{
+    font-weight: 400;
+    color: v.$white;
+    text-transform: uppercase;
+}
+.ticket__description{
+    text-align: center;
+    width: 100%;
+    border-spacing: 0;
+}
+[class$="-row"]{
+    border: 1px solid #c1c1c1;
+}
+.ticket__heading, .ticket__body-description, .ticket__footer{
+    padding: 1rem;
+}
+
+.ticket__head-row{
+    background-color: v.$lightRed;
+}
+.ticket__body-row{
+    background-color: v.$white;
+    text-align: left;
+}
+.ticket__foot-row{
+    background-color: v.$purple;
+}
+.ticket__footer{
+    color: v.$white;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
