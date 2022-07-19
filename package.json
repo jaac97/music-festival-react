@@ -21,6 +21,7 @@
     "gulp": "^4.0.2",
     "gulp-avif": "^1.1.1",
     "gulp-babel": "^8.0.0",
+    "gulp-imagemin": "^8.0.0",
     "gulp-webp": "^4.0.1",
     "imagemin": "^4.0.0",
     "imagemin-jpegtran": "^7.0.0",
