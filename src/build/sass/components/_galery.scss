@@ -24,4 +24,42 @@
     width: 18rem;
     height: 12rem;
     object-fit: cover;
+    cursor: pointer;
+
+}
+.photo {
+    background-color: rgba(0,0,0,.5);
+    bottom: 0;
+    display: grid;
+    height: 100%;
+    left: 0;
+    place-items: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+
+}
+.photo__big{
+    max-width: 100%;
+  @include m.tablet {
+    max-width: 50%;
+  }
+}
+.photo__button {
+    position: relative;
+    top: -20rem;
+    background-color: v.$white;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    @include m.tablet {
+        position: unset;
+        top: 0;
+    }
 }
