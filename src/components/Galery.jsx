@@ -1,6 +1,6 @@
 const Galery = () => {
     return ( 
-        <section className="galery galery__container" >
+        <section className="galery galery__container" id="galery">
             <h2 className="galery__heading">Galery</h2>
             <div className="photos">
                 <picture>

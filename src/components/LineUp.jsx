@@ -4,7 +4,7 @@ import Edm2 from "./lineUp/Edm2";
 import Rock2 from "./lineUp/Rock2";
 const LineUp = () => {
     return (  
-        <main className="lineup" >
+        <main className="lineup" id="lineup">
             <div className="lineup__details lineup__container">
                 <h2 className="lineup__heading">Line Up</h2>
                 <div className="lineup__schedules">

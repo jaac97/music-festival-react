@@ -1,6 +1,6 @@
 const Tickets = () => {
     return (
-        <section className="tickets">
+        <section className="tickets" id="tickets">
             <div className="tickets__container">
                 <h2 className="tickets__heading">Tickets</h2>
                 <div className="tickets__grid">
