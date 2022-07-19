@@ -4,38 +4,45 @@ import babel from 'gulp-babel';
 import webp from 'gulp-webp';
 import avif from 'gulp-avif';
 
-import imagemin from 'imagemin';
-import imageminJpegtran from 'imagemin-jpegtran';
-import imageminPngquant from 'imagemin-pngquant';
+import imagemin from 'gulp-imagemin';
+
+import pkg from 'gulp';
+const {parallel} = pkg;
 
 
-function convertWebp () {
-    return gulp.src('./src/build/img/**/*')
+function convertWebp (cb) {
+   gulp.src('./src/build/img/**/*')
     .pipe(webp())
     .pipe(gulp.dest('./public/img'))
-}
-function convertAvif () {
-    return gulp.src('./src/build/img/**/*.{png,jpg,svg}')
-    .pipe(avif())
-    .pipe(gulp.dest('./public/img'))
-}
-async function quality () {
-    const files = await imagemin(['./src/build/img/**/*.{png,jpg,svg}'], {
-        destination: './public/img',
-        plugins: [
-            imageminJpegtran(),
-            imageminPngquant({
-                quality: [0.6, 0.8]
-            })
-        ]
-    });
-    return files;
-}
-
-
-
-function parallels (cb) {
-    gulp.parallel(convertWebp,convertAvif)
     cb()
 }
-export default parallels
+function convertAvif (cb) {
+   gulp.src('./src/build/img/**/*.{png,jpg}')
+    .pipe(avif())
+    .pipe(gulp.dest('./public/img'))
+    cb()
+
+}
+ function quality (cb) {
+   gulp.src('./src/build/img/**/*.{png,jpg}')
+        .pipe(imagemin({
+            optimizationLevel: 8, progressive: true, interlaced: true 
+        }))
+        .pipe(gulp.dest('./public/img'))
+    cb()
+
+    
+}
+
+/* function parallels (cb) {
+   parallel(convertWebp,convertAvif)
+    console.log("Ejecuta")
+    cb();
+} */
+gulp.task('default',  parallel(convertWebp,convertAvif, quality));
+// export default parallels;
+export {
+    convertWebp,
+    convertAvif,
+    quality
+}
